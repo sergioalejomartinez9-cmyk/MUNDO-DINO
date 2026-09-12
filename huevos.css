@@ -1,0 +1,306 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    min-height: 100vh;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background:linear-gradient(#87ceeb,#78b159 );
+    padding: 30px;
+}
+header{
+    margin-bottom: 20px;
+}
+header p{
+    font-size: 17px;
+}
+.informacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 25px auto;
+    flex-wrap: wrap;
+}
+#zona-juego {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    height: 450px;
+    margin: 20px auto;
+    border-radius: 25px;
+    background:
+        linear-gradient(#7ec850,#4d8b31);
+    border: 5px solid white;
+    overflow: hidden;
+}
+
+#zona-juego::before{
+    content:
+        "pp pp pp pp";
+
+    position: absolute;
+
+    top: 15px;
+
+    left: 0;
+
+    width: 100%;
+
+    font-size: 25px;
+
+    opacity: 0.8;
+
+    pointer-events: none;
+}
+#zona-juego::after {
+
+    content:
+        "pp  pp  pp pp pp";
+
+    position: absolute;
+
+    bottom: 15px;
+
+    left: 0;
+
+    width: 100%;
+
+    font-size: 25px;
+
+    opacity: 0.8;
+
+    pointer-events: none;
+}
+#huevo {
+    position: absolute;
+
+    left: 50px;
+
+    top: 50px;
+
+    width: 75px;
+
+    height: 75px;
+
+    padding: 5px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,0.20);
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 10;
+
+    transition:
+        transform 0.15s,
+}
+#huevo img {
+
+    width: 60px;
+
+    height: 60px;
+
+    object-fit: contain;
+
+    pointer-events: none;
+}
+#huevo:hover {
+
+    transform: scale(1.2);
+
+    background:
+        rgba(255,255,255,0.45);
+}
+#huevo:active {
+
+    transform: scale(0.9);
+}
+#huevo {
+    position: absolute;
+    border: none;
+    background: transparent;
+    font-size: 50px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+#huevo:hover {
+    transform: scale(1.2);
+}
+
+
+#mensaje {
+    margin: 25px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.hue img {
+    width: 400px;
+    max-width: 100%;
+    animation: respirar 2s infinite ease-in-out;
+}
+@keyframes respirar { 
+    0% { transform: translateY(0);}
+    50% {transform: translateY(-8px);}
+    100% {transform: translateY(0);}
+}
+.da img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    animation: respirar 2s infinite ease-in-out ;
+} 
+.da {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    padding: 12px 20px;
+    border-radius: 15px;
+    font-weight: bold;
+}
+.obstaculo {
+
+    position: absolute;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 50px;
+
+    z-index: 5;
+
+    user-select: none;
+
+    pointer-events: none;
+
+    filter:
+        drop-shadow(
+            2px 4px 3px
+            rgba(0,0,0,0.25)
+        );
+}
+.obstaculo1 {
+
+    left: 12%;
+
+    top: 18%;
+}
+.obstaculo1 img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    animation: respirar 2s infinite ease-in-out ;
+}
+.obstaculo2 img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    animation: respirar 2s infinite ease-in-out ;
+}
+.obstaculo3 img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    animation: respirar 2s infinite ease-in-out ;
+}
+.obstaculo4 img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    animation: respirar 2s infinite ease-in-out ;
+}
+.obstaculo5 img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    animation: respirar 2s infinite ease-in-out ;
+}
+.obstaculo2 {
+
+    left: 45%;
+
+    top: 30%;
+
+    font-size: 45px;
+}
+.obstaculo3 {
+
+    right: 10%;
+
+    top: 15%;
+
+    font-size: 60px;
+}
+.obstaculo4 {
+
+    left: 25%;
+
+    bottom: 15%;
+
+    font-size: 55px;
+}
+.obstaculo5 {
+
+    right: 25%;
+
+    bottom: 20%;
+
+    font-size: 45px;
+}
+
+.botones{
+display: inline-block;
+    margin-top: 20px;
+    padding: 14px 25px;
+    border-radius: 15px;
+    background: #87ceeb;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+a{
+    color: black;
+}
+button {
+    border: none;
+    padding: 14px 20px;
+    font-size: 16px;
+    background: #87ceeb;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+button:hover {
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+
+
+
+
