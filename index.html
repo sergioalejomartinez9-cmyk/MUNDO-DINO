@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> MUNDO DINO</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    <header>
+        <h1> MUNDO DINO</h1>
+        <p> Mi pequeño santuario jurásico</p>
+    </header>
+    <main>
+        <section class="player-info">
+            <div class="dato">
+                <img src="images/moned.png" alt="Moneda">
+                <span> : <b id="coins"> 10000  </b></span>
+            </div>
+            <div class="dato">
+                NIVEL:
+                <span id="level">1</span>
+            </div>
+            <div>
+                XP:
+                <span id="xp">0</span>
+            </div>
+        </section>
+        <section class="dinosaur-card">
+            <h2> TU AMIGUITO</h2>
+            <div class="dinosaur"> 
+                <img src="images/dinos.png" alt="Raptín">       
+            </div>
+            <h3 id="dinosaur-name"> <input placeholder=" Nombre de tu dino"> </h3>           
+            <div class="stats">
+                <p>
+                    HAMBRE
+                    <span id="hunger">80</span>%
+                </p>
+                <div class="bar">
+                    <div id="hunger-bar"></div>
+                </div>
+                <p>
+                    FELICIDAD
+                    <span id="happiness">70</span>%
+                </p>
+                <div class="bar">
+                    <div id="happiness-bar"></div>
+                </div>
+            </div>
+            <div class="actions">
+                <button id="feed-btn"> ALIMENTAR</button>
+                <button id="play-btn"> JUGAR</button>
+            </div>
+        </section>
+        <section class="message">
+            <p id="message"> ¡TU AVENTURA HA CONMEZARON</p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+    </body>
+</html>
