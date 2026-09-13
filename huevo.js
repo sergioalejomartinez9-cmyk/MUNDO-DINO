@@ -2,7 +2,7 @@ let tiempo = 20;
 
 let huevosEncontrados = 0;
 
-let huevosNecesarios = 5;
+let huevosNecesarios =8;
 
 let juegoTerminado = false;
 
@@ -250,7 +250,7 @@ function encontrarHuevo() {
 
     mensaje.textContent =
 
-        "🥚 ¡Encontraste uno! " +
+        "¡Encontraste uno! " +
 
         huevosEncontrados +
 
@@ -258,7 +258,7 @@ function encontrarHuevo() {
 
         huevosNecesarios +
 
-        " — ¡Busca el siguiente! 👀";
+        " — ¡Busca el siguiente! ";
 
 
     /*
@@ -330,7 +330,7 @@ function hacerMasDificil() {
 function comenzarMovimiento() {
 
     /*
-    Cada 1.2 segundos cambia
+    Cada 0.8 segundos cambia
     de posición.
     */
 
@@ -348,7 +348,7 @@ function comenzarMovimiento() {
 
             },
 
-            1200
+            800
         );
 }
 
@@ -416,11 +416,11 @@ function ganarJuego() {
 
     mensaje.textContent =
 
-        "🎉 ¡GANASTE! Encontraste " +
+        "¡GANASTE! Encontraste " +
 
         huevosNecesarios +
 
-        " huevos. +25 🪙 +20 XP";
+        " huevos. +25+20 XP";
 
 
     guardarRecompensa();
@@ -447,7 +447,7 @@ function perderJuego() {
 
     mensaje.textContent =
 
-        "⏰ ¡Se acabó el tiempo! " +
+        "¡Se acabó el tiempo! " +
 
         "Encontraste " +
 
@@ -457,13 +457,8 @@ function perderJuego() {
 
         huevosNecesarios +
 
-        " huevos. 😭";
-}
-
-
-// ==========================================
-// GUARDAR RECOMPENSA
-// ==========================================
+        " huevos. ";
+}
 
 function guardarRecompensa() {
 
@@ -527,11 +522,6 @@ function guardarRecompensa() {
         JSON.stringify(partida)
     );
 }
-
-
-// ==========================================
-// NUEVO JUEGO
-// ==========================================
 
 function iniciarJuego() {
 
