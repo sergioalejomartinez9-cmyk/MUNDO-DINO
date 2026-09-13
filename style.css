@@ -31,9 +31,10 @@ main{
 .player-info {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     gap: 10px;
     background: rgba(255, 255, 255, 0,9);
-    padding: 10px;
+    padding: 15px;
     border-radius: 15px;
     margin-bottom: 20px;
     font-weight: bold;
@@ -57,6 +58,14 @@ main{
     height: 35px;
     object-fit: contain;
     animation: respirar 2s infinite ease-in-out ;
+}
+.dinosaur{
+    margin: 20px 0;
+}
+.dinosaur img {
+    width: 200px;
+    max-width: 100%;
+    animation: respirar 2s infinite ease-in-out;
 }
 @keyframes respirar { 
     0% { transform: translateY(0);}
@@ -112,6 +121,22 @@ button {
 button:hover {
     transform: scale(1.05);
 }
+
+.game-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 25px;
+    border-radius: 15px;
+    background: #87ceeb;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+.game-button:hover {
+    transform: scale(1.05);
+}
+
 button:active {
     transform: scale(0.95);
 }
@@ -121,4 +146,5 @@ input{
     border: beige;
     text-align: center;
 }
+
 
